@@ -1,0 +1,23 @@
+<table class="table table-stripe">
+  <thead>
+    <tr>
+      <th scope="col"># Transaccion</th>
+      <th scope="col"> # Prestamo </th>
+      <th scope="col">Monto prestamo</th>
+      <th scope="col">Fecha</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dispersiones.each do |dispersion| %>
+      <tr>
+        <td><%= dispersion.id %></td>
+        <td><%= dispersion.prestamo_id %></td>
+        <td><%= dispersion.cantidad %></td>
+        <td><%= dispersion.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+  <%= link_to 'Regresar', dispersions_path, class: 'btn btn-outline-primary', role: "button text-white" %>
+</table>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dispersiones</h1>
+
+<table class="table table-stripe">
+  <thead>
+    <tr>
+      <th scope="col">Usuario</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Transacciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dispersions.each do |dispersion| %>
+      <tr>
+        <td><%= dispersion.usuario.primer_nombre %></td>
+        <td><%= dispersion.cantidad %></td>
+        <td>
+          <%= link_to 'Ver historial', dispersions_historial_path(dispersion.usuario_id), class: 'btn btn-secondary' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dispersiones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usuario</th>
+      <th>Prestamo</th>
+      <th>Fechaalta</th>
+      <th>Cantidad</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dispersiones.each do |dispersione| %>
+      <tr>
+        <td><%= dispersione.usuario_id %></td>
+        <td><%= dispersione.prestamo_id %></td>
+        <td><%= dispersione.fechaalta %></td>
+        <td><%= dispersione.cantidad %></td>
+        <td><%= link_to 'Show', dispersione %></td>
+        <td><%= link_to 'Edit', edit_dispersione_path(dispersione) %></td>
+        <td><%= link_to 'Destroy', dispersione, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dispersione', new_dispersione_path %>

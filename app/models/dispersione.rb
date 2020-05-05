@@ -1,0 +1,2 @@
+class Dispersione < ApplicationRecord
+end

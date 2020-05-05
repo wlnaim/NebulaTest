@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Prestamo:</strong>
+  <%= @pago.prestamo_id %>
+</p>
+
+<p>
+  <strong>Pago interes:</strong>
+  <%= @pago.pago_interes %>
+</p>
+
+<p>
+  <strong>Pago monto periodico:</strong>
+  <%= @pago.pago_monto_periodico %>
+</p>
+
+<p>
+  <strong>Pago fecha:</strong>
+  <%= @pago.pago_fecha %>
+</p>
+
+<p>
+  <strong>Pago capital:</strong>
+  <%= @pago.pago_capital %>
+</p>
+
+<p>
+  <strong>Pago prestamo saldo:</strong>
+  <%= @pago.pago_prestamo_saldo %>
+</p>
+
+<p>
+  <strong>Pago periodo:</strong>
+  <%= @pago.pago_periodo %>
+</p>
+
+<%= link_to 'Edit', edit_pago_path(@pago) %> |
+<%= link_to 'Back', pagos_path %>

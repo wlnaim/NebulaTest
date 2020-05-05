@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @dispersion.usuario_id %>
+</p>
+
+<p>
+  <strong>Prestamo:</strong>
+  <%= @dispersion.prestamo_id %>
+</p>
+
+<p>
+  <strong>Fechaalta:</strong>
+  <%= @dispersion.fechaalta %>
+</p>
+
+<p>
+  <strong>Cantidad:</strong>
+  <%= @dispersion.cantidad %>
+</p>
+
+<%= link_to 'Edit', edit_dispersion_path(@dispersion) %> |
+<%= link_to 'Back', dispersions_path %>

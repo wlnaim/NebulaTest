@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pagos</h1>
+<h3><%= @estado_prestamo%> </h3>
+
+<table class="table table-stripe">
+  <thead>
+    <tr>
+      <th scope="col"># Prestamo</th>
+      <th scope="col">Periodo</th>
+      <th scope="col">Fecha de pago</th>
+      <th scope="col">Pago Periodico</th>
+      <th scope="col">Interes</th>
+      <th scope="col">Pago Capital</th>
+      <th scope="col">Saldo restante</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @payments.each do |pago| %>
+      <tr>
+        <td><%= pago.prestamo_id %></td>
+        <td><%=pago.pago_periodo %></td>
+        <td><%= pago.pago_fecha %></td>
+        <td><%= pago.pago_monto_periodico %></td>
+        <td><%= pago.pago_interes %></td>
+        <td><%= pago.pago_capital %></td>
+        <td><%= pago.pago_prestamo_saldo %></td>
+        <!--<td><%= link_to 'Show', pago %></td>
+        <td><%= link_to 'Edit', pago_edit_path(pago) %></td>
+        <td><%= link_to 'Destroy', pago, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<!--<%= link_to 'New Pago', pago_new_path %> -->

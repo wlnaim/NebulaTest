@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @prestamo.usuario_id %>
+</p>
+
+<p>
+  <strong>Plazo prestamo:</strong>
+  <%= @prestamo.plazo_prestamo %>
+</p>
+
+<p>
+  <strong>Interes prestamo:</strong>
+  <%= @prestamo.interes_prestamo %>
+</p>
+
+<p>
+  <strong>Monto prestamo:</strong>
+  <%= @prestamo.monto_prestamo %>
+</p>
+
+<p>
+  <strong>Monto cubrir prestamo:</strong>
+  <%= @prestamo.monto_cubrir_prestamo %>
+</p>
+
+<p>
+  <strong>Pago periodico prestamo:</strong>
+  <%= @prestamo.pago_periodico_prestamo %>
+</p>
+
+<%= link_to 'Edit', edit_prestamo_path(@prestamo) %> |
+<%= link_to 'Back', prestamos_path %>

@@ -1,0 +1,43 @@
+<h1>Prestamos</h1>
+<p>
+  <%= link_to 'Agregar nuevo prestamo', prestamos_new_path, class: 'btn btn-primary text-white' %>
+</p>
+
+<table class="table table-stripe">
+  <thead>
+    <tr>
+      <!--<th scope="col">Usuario</th>-->
+      <th scope="col">Plazo prestamo</th>
+      <th scope="col">Interes prestamo</th>
+      <th scope="col">Monto prestamo</th>
+      <th scope="col">Monto cubrir prestamo</th>
+      <th scope="col">Pago periodico prestamo</th>
+      <th scope="col">Ver más...</th>
+      <th scope="col"> Dispersar </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prestamos.each do |prestamo| %>
+      <tr>
+        <!--<td><%= prestamo.usuario_id %></td>-->
+        <td><%= prestamo.plazo_prestamo %></td>
+        <td><%= prestamo.interes_prestamo %></td>
+        <td><%= prestamo.monto_prestamo %></td>
+        <td><%= prestamo.monto_cubrir_prestamo %></td>
+        <td><%= prestamo.pago_periodico_prestamo %></td>
+        <td><%= link_to 'Consultar tabla armotizacion', pago_prestamo_path(prestamo.id) %></td>
+        <td>
+          <% if prestamo.is_dispersado != true %>
+              <%= link_to 'Dispersar', generar_dispersion_path(prestamo.id), class: 'btn btn-secondary' %>
+          <%end%>
+        </td>
+        <!--<td><%= link_to 'Edit', edit_prestamo_path(prestamo) %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

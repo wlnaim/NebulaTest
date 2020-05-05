@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  usuario_id: 1
+  plazo_prestamo: 1
+  interes_prestamo: 1.5
+  monto_prestamo: 1.5
+  monto_cubrir_prestamo: 1.5
+  pago_periodico_prestamo: 1.5
+
+two:
+  usuario_id: 1
+  plazo_prestamo: 1
+  interes_prestamo: 1.5
+  monto_prestamo: 1.5
+  monto_cubrir_prestamo: 1.5
+  pago_periodico_prestamo: 1.5

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  usuario_id: 1
+  prestamo_id: 1
+  fechaalta: 2020-04-27
+  cantidad: 1.5
+
+two:
+  usuario_id: 1
+  prestamo_id: 1
+  fechaalta: 2020-04-27
+  cantidad: 1.5

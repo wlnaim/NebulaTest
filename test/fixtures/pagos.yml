@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prestamo_id: 1
+  pago_interes: 1.5
+  pago_monto_periodico: 1.5
+  pago_fecha: 2020-04-24
+  pago_capital: 1.5
+  pago_prestamo_saldo: 1.5
+  pago_periodo: 1
+
+two:
+  prestamo_id: 1
+  pago_interes: 1.5
+  pago_monto_periodico: 1.5
+  pago_fecha: 2020-04-24
+  pago_capital: 1.5
+  pago_prestamo_saldo: 1.5
+  pago_periodo: 1

@@ -1,0 +1,38 @@
+<%= form_for(dispersione) do |f| %>
+  <% if dispersione.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dispersione.errors.count, "error") %> prohibited this dispersione from being saved:</h2>
+
+      <ul>
+      <% dispersione.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!--<div class="field">
+    <%= f.label :usuario_id %>
+    <%= f.number_field :usuario_id %>
+  </div>-->
+  <%= f.collection_select :usuario_id, Usuario.all, :id, :email %>
+
+  <div class="field">
+    <%= f.label :prestamo_id %>
+    <%= f.number_field :prestamo_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fechaalta %>
+    <%= f.date_select :fechaalta %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cantidad %>
+    <%= f.text_field :cantidad %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,52 @@
+<%= form_for(pago) do |f| %>
+  <% if pago.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pago.errors.count, "error") %> prohibited this pago from being saved:</h2>
+
+      <ul>
+      <% pago.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :prestamo_id %>
+    <%= f.number_field :prestamo_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pago_interes %>
+    <%= f.text_field :pago_interes %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pago_monto_periodico %>
+    <%= f.text_field :pago_monto_periodico %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pago_fecha %>
+    <%= f.date_select :pago_fecha %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pago_capital %>
+    <%= f.text_field :pago_capital %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pago_prestamo_saldo %>
+    <%= f.text_field :pago_prestamo_saldo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pago_periodo %>
+    <%= f.number_field :pago_periodo %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

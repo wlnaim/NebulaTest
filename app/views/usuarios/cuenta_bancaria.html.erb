@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-6">
+        <%= form_for(@usuario, url: usuario_update_cuenta_path)  do |f| %>
+            <div class="form-group">
+                 <label>Cuenta Bancaria</label>
+                <%= f.text_field(:cuenta_bancaria,  {:class => 'form-control', :required => 'required'}) %>
+            </div>
+            <div>
+                <%= f.submit('Actualizar cuenta bancaria', {:class => 'btn btn-primary'}) %>
+            </div>
+        <% end %>
+    </div>
+</div>

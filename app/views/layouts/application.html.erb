@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prestamos</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="/assets/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Sistema de prestamos</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+            </li>
+            <% if user_signed_in? %>
+            <li class="nav-item">
+              <!--<a class="nav-link" href="#">Prestamos</a>-->
+              <%= link_to 'Prestamos', prestamos_path, class: 'nav-link' %>
+            </li>
+            <%end%>
+            <% if user_signed_in? %>
+            <li class="nav-item">
+              <!--<a class="nav-link" href="#">Prestamos</a>-->
+              <%= link_to 'Estado de Cuenta', dispersions_path, class: 'nav-link' %>
+            </li>
+            <%end%>
+            <% if user_signed_in? %>
+              <li class="nav-item">
+                <%= link_to current_user.email, usuarios_cuenta_bancaria_path , class:'nav-link' %>
+              </li>
+            <%end%>
+            <li class="nav-item">
+                <% if user_signed_in? %>
+                  <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, :class => 'nav-link'  %>
+                <% else %>
+                  <%= link_to "Login", new_user_session_path, :class => 'nav-link'  %>
+                <% end %>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      
+      <% if notice %>
+        <div class="alert alert-success"><%= notice %></div>
+      <% end %>
+      <% if alert %>
+        <div class="alert alert-danger"><%= alert %></div>
+      <% end %>
+      <%= yield %>
+    </div>
+  </body>
+</html>
